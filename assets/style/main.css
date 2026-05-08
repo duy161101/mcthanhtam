@@ -150,18 +150,38 @@ nav ul li a:hover {
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    background: var(--primary-color);
-    color: var(--white);
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--accent-color), #E8C881);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
     text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-    border: 1px solid var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    animation: pulse-btn 2s infinite;
 }
 
 .btn:hover {
-    background: transparent;
-    color: var(--primary-color);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.6);
+    color: #fff;
+    background: linear-gradient(135deg, #E8C881, var(--accent-color));
+}
+
+@keyframes pulse-btn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(197, 160, 89, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+    }
 }
 
 /* --- ABOUT SECTION (Trang 2) --- */
@@ -310,12 +330,104 @@ nav ul li a:hover {
     color: var(--white);
 }
 
-.video-container {
+.video-swiper {
+    width: 100%;
+    padding: 20px 0 80px 0; /* Space for pagination and arrows at the bottom */
+    position: relative;
+    margin-top: 30px;
+}
+
+.video-swiper .swiper-slide {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: #000;
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
+}
+
+.video-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.8;
+}
+
+.video-swiper .swiper-slide:hover img {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+.video-swiper .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.video-swiper .swiper-slide:hover .play-btn {
+    color: var(--accent-color);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Định dạng 2 nút Prev/Next xuống dưới góc trái */
+.video-swiper .swiper-button-next,
+.video-swiper .swiper-button-prev {
+    top: auto;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: var(--primary-color);
+    margin: 0;
+    transition: 0.3s;
+}
+
+.video-swiper .swiper-button-next:hover,
+.video-swiper .swiper-button-prev:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.video-swiper .swiper-button-next::after,
+.video-swiper .swiper-button-prev::after {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.video-swiper .swiper-button-prev {
+    left: 10px;
+}
+
+.video-swiper .swiper-button-next {
+    left: 60px;
+    right: auto;
+}
+
+.video-swiper .swiper-pagination {
+    bottom: 20px;
+}
+
+.video-swiper .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.video-swiper .swiper-pagination-bullet-active {
+    background: var(--accent-color);
+    opacity: 1;
 }
 
 .video-btn {
@@ -343,11 +455,9 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+.partner-swiper {
+    width: 100%;
+    padding: 20px 0;
 }
 
 .partner-logo-box {
@@ -355,17 +465,18 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: #888;
     border: 2px dashed #ddd;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 8px;
-    min-width: 190px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    min-height: 100px;
 }
 
 .logo-img {
-    max-width: 150px;
-    max-height: 100px;
+    max-width: 100%;
+    max-height: 80px;
     object-fit: contain;
 }
 
@@ -405,5 +516,11 @@ footer {
     .section-title { font-size: 2rem; }
     .info-contact {
         flex-direction: column;
+    }
+    .video-swiper {
+        padding: 20px 0 80px 0;
+    }
+    .video-swiper .play-btn {
+        font-size: 1.5rem;
     }
 }

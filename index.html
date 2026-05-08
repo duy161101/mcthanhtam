@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/style/main.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
@@ -230,42 +231,69 @@
     <section id="media" class="media-links">
         <h2>Video Sự Kiện & Review</h2>
         <p style="color: #ccc; margin-bottom: 30px;">Cập nhật các hoạt động mới nhất trên kênh Youtube</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/u-N8ptLZXLE" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/zj_eh2ZEKJ0" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/Sq7ea6Ge9OY" frameborder="0" allowfullscreen title="YEP Hải Âu"></iframe>
-            <iframe src="https://www.youtube.com/embed/CcrM-QPh-nc" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/eEHPk-R9KWk" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/QxZrMIxE4A4" frameborder="0" allowfullscreen></iframe>
+        <div class="swiper video-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="openVideo('u-N8ptLZXLE')">
+                    <img src="https://img.youtube.com/vi/u-N8ptLZXLE/hqdefault.jpg" alt="Video">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="swiper-slide" onclick="openVideo('zj_eh2ZEKJ0')">
+                    <img src="https://img.youtube.com/vi/zj_eh2ZEKJ0/hqdefault.jpg" alt="Video">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="swiper-slide" onclick="openVideo('Sq7ea6Ge9OY')">
+                    <img src="https://img.youtube.com/vi/Sq7ea6Ge9OY/hqdefault.jpg" alt="Video YEP Hải Âu">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="swiper-slide" onclick="openVideo('CcrM-QPh-nc')">
+                    <img src="https://img.youtube.com/vi/CcrM-QPh-nc/hqdefault.jpg" alt="Video">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="swiper-slide" onclick="openVideo('eEHPk-R9KWk')">
+                    <img src="https://img.youtube.com/vi/eEHPk-R9KWk/hqdefault.jpg" alt="Video">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="swiper-slide" onclick="openVideo('QxZrMIxE4A4')">
+                    <img src="https://img.youtube.com/vi/QxZrMIxE4A4/hqdefault.jpg" alt="Video">
+                    <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
     <section id="partners" class="partners">
         <h2 class="section-title">Đối Tác Đồng Hành</h2>
-        <div class="partner-logos">
-            <div class="partner-logo-box"><img src="/assets/img/partner/vingroup.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/coca-cola.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/agribank.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/Viettel_Digital.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/mg.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/sanaky.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/mitsubishi.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/dolce.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/bao-tin.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/eximbank.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/siba.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/educhain.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/BVDKHN.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/an-viet.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/mat-anh-sang.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/hai-au.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/sgo-land.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/indochine.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/won-group.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/DX-Mien-Bac.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/mik-group.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/AHS-Group.png" class="logo-img" alt=""></div>
-            <div class="partner-logo-box"><img src="/assets/img/partner/regal-group.png" class="logo-img" alt=""></div>
+        <div class="swiper partner-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/vingroup.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/coca-cola.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/agribank.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/Viettel_Digital.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/mg.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/sanaky.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/mitsubishi.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/dolce.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/bao-tin.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/eximbank.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/siba.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/educhain.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/BVDKHN.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/an-viet.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/mat-anh-sang.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/hai-au.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/sgo-land.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/indochine.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/won-group.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/DX-Mien-Bac.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/mik-group.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/AHS-Group.png" class="logo-img" alt=""></div>
+                <div class="swiper-slide partner-logo-box"><img src="/assets/img/partner/regal-group.png" class="logo-img" alt=""></div>
+            </div>
+            <!-- Pagination cho phần Đối Tác -->
+            <div class="swiper-pagination partner-pagination" style="position: relative; margin-top: 20px;"></div>
         </div>
     </section>
 
@@ -284,10 +312,28 @@
                     <i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/thanh.tam.903509" target="_blank" style="color: #fff; text-decoration: none;">facebook.com/mcthanhtam</a>
                 </p>
             </div>
-            <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">© 2026 MC Thanh Tâm Profile</p>
+            <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">© Design By Noah</p>
         </div>
     </footer>
 
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoPlayer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -340,6 +386,81 @@
             observer.observe(el);
         });
 
+        // Swiper Video Initialization
+        const videoSwiper = new Swiper('.video-swiper', {
+            loop: true,
+            speed: 600,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        });
+
+        // Partner Swiper Initialization
+        const partnerSwiper = new Swiper('.partner-swiper', {
+            loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.partner-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 30
+                }
+            }
+        });
+
+        // Video Modal Logic
+        let videoModal;
+        
+        function openVideo(videoId) {
+            if (!videoModal) {
+                videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+            }
+            document.getElementById('videoPlayer').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoModal.show();
+        }
+
+        document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+            document.getElementById('videoPlayer').src = '';
+        });
     </script>
 </body>
 </html>
