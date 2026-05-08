@@ -398,6 +398,9 @@ footer {
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     nav { display: none; } /* Ẩn menu trên mobile cho đơn giản */
+    .hero {
+        height: 400px;
+    }
     .hero-content h1 { font-size: 2.5rem; }
     .section-title { font-size: 2rem; }
     .info-contact {
